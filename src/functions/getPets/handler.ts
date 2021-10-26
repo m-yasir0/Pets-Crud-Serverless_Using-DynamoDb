@@ -18,7 +18,7 @@ const getPets: ValidatedEventAPIGatewayProxyEvent<typeof schema> = async (
       process.env.IS_OFFLINE,
       'pets'
     ).getAllRecords(event.queryStringParameters);
-    if (response.items && response.Items.length == 0) {
+    if (response.Items && response.Items.length == 0) {
       return formatJSONResponse(
         {
           response,
